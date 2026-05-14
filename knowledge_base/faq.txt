@@ -1,0 +1,151 @@
+FREQUENTLY ASKED QUESTIONS — E-COMMERCE STORE
+
+=== ORDER TRACKING & STATUS ===
+
+Q: How do I track my order?
+A: Once your order is shipped, you will receive a tracking ID via SMS and email. You can also ask our AI assistant "Track order [your order ID]" to get real-time status.
+
+Q: What do the different order statuses mean?
+A: Pending: Order placed, awaiting confirmation. Processing: Order confirmed and being prepared. Shipped: Package handed to courier. Delivered: Package delivered to your address. Cancelled: Order was cancelled. Refunded: Refund has been processed.
+
+Q: My order has not arrived — what should I do?
+A: If your order has not arrived after the estimated delivery date, please contact support with your order ID. We will investigate and provide a resolution within 24 hours.
+
+Q: I received the wrong item. What do I do?
+A: If you received the wrong item, please contact support within 48 hours of delivery with your order ID and a photo of the item received. We will arrange a free replacement or full refund.
+
+Q: My item arrived damaged. What should I do?
+A: If your item arrived damaged, please report it within 48 hours with photos. We will arrange a free replacement or process a full refund without requiring you to return the damaged item.
+
+=== RETURNS & REFUNDS ===
+
+Q: What is the return policy?
+A: We accept returns within 30 days of delivery. The item must be unused, in its original packaging, and accompanied by a receipt or proof of purchase.
+
+Q: How does the refund process work?
+A: Once we receive and inspect your returned item, we will notify you of the approval or rejection of your refund. Approved refunds are processed within 5-7 business days to your original payment method.
+
+Q: What is the exchange policy?
+A: If you need to exchange an item for a different size or color, please initiate a return for the original item and place a new order for the preferred item.
+
+Q: A product I received does not match its description. Can I return it?
+A: Yes. If a product does not match its description or photos on the website, please contact support within 7 days of delivery. We will arrange a return and full refund at no cost to you.
+
+=== ORDER CANCELLATION ===
+
+Q: How do I cancel my order?
+A: You can cancel your order within 24 hours of placing it, provided it has not yet been shipped. Please contact our support team immediately or ask the AI assistant "Cancel my order [order ID]".
+
+Q: Can I cancel after the order has shipped?
+A: If your order has already been shipped, you can refuse the delivery and it will be returned to us. Once received, we will process a full refund within 5-7 business days.
+
+Q: Can I cancel only part of my order?
+A: Yes, you can cancel individual items before shipping by contacting our support team. Provide your order ID and the specific item you wish to cancel.
+
+Q: When will I receive my refund after cancellation?
+A: For cancelled orders paid online, refunds are processed within 3-5 business days to your original payment method. COD orders with no payment made are cancelled instantly.
+
+=== PAYMENTS ===
+
+Q: What payment methods are accepted?
+A: We accept Visa, MasterCard, American Express credit and debit cards, JazzCash, EasyPaisa, PayPal, and Cash on Delivery (COD) for eligible areas.
+
+Q: Is Cash on Delivery available?
+A: Yes, we offer Cash on Delivery (COD) for eligible locations. Please check availability for your area at checkout.
+
+Q: How do I pay with JazzCash or EasyPaisa?
+A: At checkout, select JazzCash or EasyPaisa as your payment method. Enter your registered mobile number and confirm the payment via the OTP sent to you.
+
+Q: My payment failed but the amount was deducted — what now?
+A: Please wait 24 hours as the amount usually reverses automatically. If it does not reverse, contact support with your bank transaction ID and we will resolve it within 48 hours.
+
+Q: Is my payment information secure?
+A: Yes. All payments are processed through PCI-DSS compliant gateways with SSL encryption. We never store your full card details on our servers.
+
+Q: Can I get an invoice for my order?
+A: A digital receipt is emailed to you after every successful order. You can request a formal invoice by contacting support with your order ID.
+
+=== SHIPPING & DELIVERY ===
+
+Q: How long does shipping take?
+A: Standard shipping takes 3-5 business days. Expedited or express shipping is available in select cities and usually takes 1-2 business days.
+
+Q: Is free shipping available?
+A: Yes, standard shipping is free for all orders above PKR 5,000. Orders below PKR 5,000 attract a flat delivery fee of PKR 150.
+
+Q: Do you ship across Pakistan?
+A: Yes, we deliver to all major cities and towns including Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, Peshawar, Quetta, and more.
+
+Q: Do you offer international shipping?
+A: Currently, we only ship within Pakistan. We are working to expand our delivery network internationally.
+
+Q: My delivery is delayed — what can I do?
+A: Contact support with your order ID if your delivery is beyond the estimated date. We will escalate with our courier partner and provide an update within 24 hours.
+
+Q: Can I change my delivery address after placing an order?
+A: Yes, but only before the order is shipped. Contact support as soon as possible with your order ID and new address.
+
+=== PRODUCTS & PRICING ===
+
+Q: What product categories do you offer?
+A: We offer products across Electronics, Mobile Phones, Laptops, Fashion, Footwear, Men's Watches, Women's Bags, Beauty & Personal Care, Home Appliances, Gaming, and many more categories.
+
+Q: How do I search for products?
+A: Ask our AI assistant by category or name. For example: "Show me laptops", "Browse electronics", or "Find shoes under PKR 5,000".
+
+Q: Are product reviews verified?
+A: Yes. All reviews are submitted by customers who have purchased the product. We verify all reviews to ensure authenticity.
+
+Q: What warranty do products come with?
+A: All electronics and appliances come with a standard 1-year manufacturer warranty. Specific warranty terms are available on each product page.
+
+Q: Is there a minimum order requirement?
+A: No, there is no minimum order. You can order a single item. Orders above PKR 5,000 qualify for free shipping.
+
+=== DISCOUNTS & OFFERS ===
+
+Q: Are there any discounts available?
+A: We regularly run promotions and sales. Ask our assistant "Show me discounted products" or "Are there any offers?" to see current deals.
+
+Q: How do I use a discount code?
+A: Enter your promotional discount code at checkout in the "Promo Code" field. Codes are case-sensitive and can only be used once per account unless stated otherwise.
+
+Q: Do you have bundle deals?
+A: Yes, we occasionally offer bundle deals and combo packs. Ask "Are there any bundle deals available?" to see current promotions.
+
+Q: Are gift cards available?
+A: Yes, gift cards are available in denominations of PKR 500, 1,000, 2,500, and 5,000. They can be purchased online and redeemed at checkout. Gift cards do not expire.
+
+=== SUPPORT TICKETS & COMPLAINTS ===
+
+Q: How do I raise a support ticket?
+A: Ask our AI assistant "I want to raise a ticket" or "Create a support ticket". You will be guided step-by-step to describe your issue type and details.
+
+Q: How do I check the status of my support ticket?
+A: Contact us at support@store.com with your ticket ID. Our team will provide an update within one business day.
+
+Q: How do I speak to a human agent?
+A: Type "Connect me to a human agent" or "I need real help" in the chat. Your request will be escalated and a representative will contact you shortly at support@store.com or 0300-1234567.
+
+=== ACCOUNT & GENERAL ===
+
+Q: How do I create an account?
+A: Click "Sign Up" on our website or app. Provide your name, email address, and phone number. Account creation is free and takes less than a minute.
+
+Q: What are your customer support hours?
+A: Our online store is open 24/7. Customer support is available Monday to Saturday, 9 AM to 6 PM. Email responses are sent within one business day.
+
+Q: What is your privacy policy?
+A: Your personal data is never sold to third parties. We collect only information necessary to process orders and improve your experience. Full policy available at our website.
+
+Q: How do I request deletion of my data?
+A: Email privacy@store.com to request deletion of your account and all associated data. Requests are processed within 30 days.
+
+Q: Do you have a loyalty or rewards program?
+A: Yes, we have a rewards program where you earn points on every purchase. Points can be redeemed for discounts on future orders.
+
+Q: Do you have a mobile app?
+A: Yes, our app is available on Google Play Store (Android) and Apple App Store (iOS). Search for our store name to download the official app.
+
+Q: Do you offer business or bulk purchase pricing?
+A: Yes. Contact our B2B team at business@store.com for bulk pricing, dedicated account managers, and priority support.

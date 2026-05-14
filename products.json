@@ -1,0 +1,6 @@
+[
+  {"id": 1, "name": "Wireless Headphones", "category": "Electronics", "price": 99.99, "description": "High-quality wireless headphones with noise cancellation."},
+  {"id": 2, "name": "Running Shoes", "category": "Apparel", "price": 59.99, "description": "Comfortable and lightweight running shoes for daily use."},
+  {"id": 3, "name": "Smart Watch", "category": "Electronics", "price": 149.99, "description": "Track your fitness, heart rate, and notifications on the go."},
+  {"id": 4, "name": "Yoga Mat", "category": "Fitness", "price": 25.00, "description": "Non-slip yoga mat with extra thickness for better support."}
+]

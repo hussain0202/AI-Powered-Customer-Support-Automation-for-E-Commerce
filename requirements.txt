@@ -1,0 +1,11 @@
+streamlit
+pandas
+textblob
+sentence-transformers
+scikit-learn
+torch
+numpy
+chromadb
+rapidfuzz
+groq
+python-dotenv

@@ -1,0 +1,16 @@
+.claude/
+__pycache__/
+env/
+venv/
+.env
+
+# Data and Database files
+data/
+database/*.db
+database/*.npz
+database/chroma_db/
+support.db
+
+# Temporary files
+*.tmp.*
+*.log
