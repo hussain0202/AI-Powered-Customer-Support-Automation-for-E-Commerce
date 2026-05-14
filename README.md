@@ -1,6 +1,6 @@
 # E-Commerce AI Support Platform
 
-An intelligent, multi-layered customer support system built on the Olist Brazilian E-Commerce Dataset. It combines a Groq-powered LLM, a RAG pipeline backed by ChromaDB, semantic intent classification, and a real SQLite product/order database into a single Streamlit web application.
+An intelligent, multi-layered customer support system built on Pakistani and Daraz e-commerce data with PKR pricing, and the Olist Brazilian E-Commerce Dataset for analytics. It combines a Groq-powered LLM, a RAG pipeline backed by ChromaDB, semantic intent classification, and a real SQLite product/order database into a single Streamlit web application.
 
 ---
 
