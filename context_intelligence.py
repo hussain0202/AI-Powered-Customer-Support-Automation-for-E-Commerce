@@ -41,7 +41,14 @@ def resolve_references(user_message: str, context: dict) -> str:
         elif context.get("active_category"):
             text = re.sub(pronoun_pattern, context["active_category"], text, flags=re.IGNORECASE)
         elif context.get("active_order_id"):
-            text = re.sub(pronoun_pattern, context["active_order_id"], text, flags=re.IGNORECASE)
+            # Only substitute when the message doesn't already contain an explicit order ID —
+            # otherwise "this order: 100147447" would get "this" replaced with the stale context ID
+            has_explicit_order_id = bool(
+                re.search(r'\b[a-f0-9]{32}\b', lower_text, re.IGNORECASE)
+                or re.search(r'\b(?:ORD)?\d{3,}\b', lower_text)
+            )
+            if not has_explicit_order_id:
+                text = re.sub(pronoun_pattern, context["active_order_id"], text, flags=re.IGNORECASE)
             
     return text
 

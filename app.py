@@ -22,7 +22,12 @@ from rag.retriever import initialize_retriever
 
 # 1. Initialize DB & Global Models (must run before login so users table exists)
 db.init_db()
-initialize_retriever()
+
+@st.cache_resource
+def _init_rag():
+    initialize_retriever()
+
+_init_rag()
 response_router = ResponseGenerator()
 semantic_classifier = get_classifier()
 

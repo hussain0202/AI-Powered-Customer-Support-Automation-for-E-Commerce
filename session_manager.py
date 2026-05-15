@@ -39,7 +39,7 @@ INTENT_SLOT_REQUIREMENTS = {
     "inventory_query": ["category"],
     "product_recommendation": ["budget", "category"],
     "order_tracking": ["order_id"],
-    "refund_return": ["order_id", "refund_reason"],
+    "refund_return": ["order_id", "refund_reason", "refund_confirmation"],
     "product_availability": ["product_name"],
     "pricing_query": ["product_name"],
     "cancel_order": ["order_id"],
@@ -51,7 +51,12 @@ FOLLOW_UP_QUESTIONS = {
     "category": "Please specify a category (type 'list categories' to see all available options).",
     "budget": "Please share your budget.",
     "order_id": "Please provide your order ID.",
-    "refund_reason": "Please tell me the reason for the refund.",
+    "refund_reason": "Please tell me the reason for the return/refund.",
+    "refund_confirmation": (
+        "Thank you for providing the details. Would you like us to raise a return/refund ticket?\n\n"
+        "Our support team will review your request and process it accordingly.\n\n"
+        "Please reply **yes** to confirm or **no** to cancel."
+    ),
     "product_name": "Please provide the product name.",
     "payment_issue_description": "Please describe the payment issue you are facing.",
     "ticket_issue_type": (
@@ -89,6 +94,16 @@ def extract_product_name(text: str):
         return None
     return text.strip()
 
+def extract_confirmation(text: str):
+    lower = text.lower().strip()
+    yes_words = {"yes", "yeah", "yep", "sure", "ok", "okay", "confirm", "proceed", "please", "go ahead", "create", "raise", "do it", "agree"}
+    no_words = {"no", "nope", "nah", "cancel", "nevermind", "never mind", "don't", "do not", "skip", "stop", "reject"}
+    if any(w in lower for w in yes_words):
+        return "yes"
+    if any(w in lower for w in no_words):
+        return "no"
+    return None
+
 _TICKET_TYPE_MAP = {
     "1": "Payment Problem",
     "2": "Delivery Issue",
@@ -107,7 +122,7 @@ _TICKET_TYPE_MAP = {
 }
 
 # Slots that must be answered explicitly via follow-up questions — never extract from the intent trigger message
-_NO_PREFILL_SLOTS = {"ticket_issue_type", "ticket_description"}
+_NO_PREFILL_SLOTS = {"ticket_issue_type", "ticket_description", "refund_reason", "refund_confirmation"}
 
 
 def extract_issue_type(text: str):
@@ -122,6 +137,7 @@ def extract_entity(text: str, slot_name: str):
     elif slot_name == "budget": return extract_budget(text)
     elif slot_name == "category": return extract_category(text)
     elif slot_name == "ticket_issue_type": return extract_issue_type(text)
+    elif slot_name == "refund_confirmation": return extract_confirmation(text)
     elif slot_name in ["product_name", "refund_reason", "payment_issue_description", "ticket_description"]:
         return extract_product_name(text)
     return None
@@ -598,10 +614,16 @@ def process_user_message(user_message: str, chat_history: list, conversation_sta
         elif active_intent == "refund_return":
             order_id = state["collected_slots"].get("order_id")
             refund_reason = state["collected_slots"].get("refund_reason", "Not specified")
+            confirmation = state["collected_slots"].get("refund_confirmation", "yes")
             order = track_order(order_id)
             state["context"]["active_order_id"] = order_id
             if not order:
                 sql_section = f"I couldn't find order {order_id}. Please double-check the order ID."
+            elif confirmation == "no":
+                sql_section = (
+                    f"No problem! Your return/refund request for order {order_id} has been cancelled.\n"
+                    f"If you change your mind or need any further assistance, feel free to ask."
+                )
             else:
                 current_status = order["order_status"].lower()
                 if current_status == "refunded":
@@ -616,17 +638,23 @@ def process_user_message(user_message: str, chat_history: list, conversation_sta
                         f"If a payment was made, please contact support for refund details."
                     )
                 else:
-                    # ── ACTUALLY update status to refunded in the database ──
-                    update_order_status(order_id, "refunded")
+                    ticket_id = log_support_ticket(
+                        order_id=order_id,
+                        issue_type="refund_return",
+                        description=f"Return/Refund Request. Reason: {refund_reason}",
+                        user_id=state["context"].get("user_id"),
+                    )
                     sql_section = (
-                        f"Refund initiated for order {order_id}.\n"
-                        f"Reason: {refund_reason}\n\n"
+                        f"Your return/refund request has been submitted successfully.\n\n"
+                        f"**Ticket ID:** #{ticket_id}\n"
+                        f"**Reason:** {refund_reason}\n\n"
                         f"Order Details:\n"
                         f"  Product: {order['product_name']}\n"
-                        f"  Previous Status: {order['order_status']}\n"
-                        f"  New Status: Refunded\n"
+                        f"  Current Status: {order['order_status']}\n"
                         f"  Payment Method: {order['payment_method']}\n"
-                        f"  Total: PKR {order['order_total']:,.0f}"
+                        f"  Total: PKR {order['order_total']:,.0f}\n\n"
+                        f"Our support team will review ticket #{ticket_id} and process your return/refund within 24–48 hours. "
+                        f"Please save your ticket ID for future reference."
                     )
 
         elif active_intent == "payment_issue":
